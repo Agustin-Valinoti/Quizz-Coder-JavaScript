@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "pregunta": "¿Cual es la capital de España?",
+        "img": "../assets/espana.png",
+        "respuesta": ["Madrid", "Barcelona", "Cordoba", "Valencia"]
+    },
+    {
+        "id": "2",
+        "pregunta": "¿Cual es la capital de Argentina?",
+        "img": "../assets/argentina.png",
+        "respuesta": ["Buenos Aires", "Cordoba", "Mendoza", "Tierra del Fuego"]
+    },
+    {
+        "id": "3",
+        "pregunta": "¿Cual es la capital de Colombia?",
+        "img": "../assets/colombia.png",
+        "respuesta": ["Bogota", "Caracas", "Medellin", "Lima"]
+    },
+    {
+        "id": "4",
+        "pregunta": "¿Cual es la capital de Alemania?",
+        "img": "../assets/alemania.png",
+        "respuesta": ["Berlin", "Amsterdam", "Munich", "Budapest"]
+    },
+    {
+        "id": "5",
+        "pregunta": "¿Cual es la capital de Portugal?",
+        "img": "../assets/portugal.png",
+        "respuesta": ["Lisboa", "Alentejo", "Algarve", "Porto"]
+    },
+    {
+        "id": "6",
+        "pregunta": "¿Cual es la capital de Brasil?",
+        "img": "../assets/brasil.png",
+        "respuesta": ["Brasilia", "Rio de Janeiro", "Sao Paulo", "Florianopolis"]
+    },
+    {
+        "id": "7",
+        "pregunta": "¿Cual es la capital de Francia?",
+        "img": "../assets/francia.png",
+        "respuesta": ["Paris", "Marsella", "Lyon", "Bordeaux"]
+    },
+    {
+        "id": "8",
+        "pregunta": "¿Cual es la capital de Uruguay?",
+        "img": "../assets/uruguay.png",
+        "respuesta": ["Montevideo", "Lavalleja", "Florida", "Cerro Largo"]
+    },
+    {
+        "id": "9",
+        "pregunta": "¿Cual es la capital de Italia?",
+        "img": "../assets/italia.png",
+        "respuesta": ["Roma", "Napoli", "Milan", "Genova"]
+    },
+    {
+        "id": "10",
+        "pregunta": "¿Cual es la capital de Mexico?",
+        "img": "../assets/mexico.png",
+        "respuesta": ["Mexico", "Guadalajara", "Monterrey", "Cancun"]
+    }
+]
