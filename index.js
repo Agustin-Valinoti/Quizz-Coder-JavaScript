@@ -35,10 +35,10 @@ function useDataApi() {
 
     const htmlAnswersArray = a.map( //RECORRO EL ARRAY DE RESPUESTAS
       (currentA) => `
-        <p class="answer"><button onClick="evaluateAnswer('${currentA}', this)">X</button> <span>${currentA}</span></p>
+        <p class="answer"><button class="btnScript" onClick="evaluateAnswer('${currentA}', this)"><span>${currentA}</span></button> </p>
         `
     );
-    const htmlAnswers = htmlAnswersArray.join(" ");
+    const htmlAnswers = htmlAnswersArray.join(" "); // LO AGREGO A UNA VARIABLE NUEVA SEPARADO POR ESPACIOS
 
     let htmlQuestionCode = `<p>${q.pregunta}</p> <img src="${q.img}"/> <div>${htmlAnswers}</div>`; // IMPRIMO EL CUESTIONARIO EN EL DOM
     document.querySelector(".pregunta").innerHTML = htmlQuestionCode;

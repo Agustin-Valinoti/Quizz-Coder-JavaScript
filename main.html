@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,19 +11,22 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/index.css">
     <title>¿CualEsLaCapitalDe?</title>
   </head>
   <body>
-    <div class="pregunta"></div>
-    <div class="respuesta">
-      <div>
-        <p>Respuestas Correctas <span class="correctas">0</span></p>
-        <p>Respuestas Incorrectas <span class="incorrectas">0</span></p>
+    <main class="mainHTML">
+      <div class="pregunta"></div>
+      <div class="respuesta">
+        <div>
+          <p>Respuestas Correctas <span class="correctas">0</span></p>
+          <p>Respuestas Incorrectas <span class="incorrectas">0</span></p>
+        </div>
+        <div>
+          <p>Tiempo: <span class="time">5</span></p>
+        </div>
       </div>
-      <div>
-        <p>Tiempo: <span class="time">5</span></p>
-      </div>
-    </div>
+    </main>
     <script src="/index.js"></script>
   </body>
 </html>
