@@ -4,24 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Righteous&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/index.css" />
-    <title>Quizz Challenge</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>¿CualEsLaCapitalDe?</title>
   </head>
   <body>
-    <main id="indexHTML">
-      <div class="indexDiv">
-          <h1 class="indexDiv__item">Quizz Challenge</h1>
-          <h4 class="indexDiv__item"> Por Agustin Valinoti </h4>
-          <p class="indexDiv__item"> Proyecto JavaScript de CoderHouse</p>
-        <button class="comenzar indexDiv__item"><a href="/main.html" class="indexDiv__link">COMENZAR</a></button>
+    <div class="pregunta"></div>
+    <div class="respuesta">
+      <div>
+        <p>Respuestas Correctas <span class="correctas">0</span></p>
+        <p>Respuestas Incorrectas <span class="incorrectas">0</span></p>
       </div>
-    </main>
+      <div>
+        <p>Tiempo: <span class="time">5</span></p>
+      </div>
+    </div>
     <script src="/index.js"></script>
   </body>
 </html>
