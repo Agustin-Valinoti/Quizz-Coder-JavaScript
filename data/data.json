@@ -58,5 +58,11 @@
         "pregunta": "¿Cual es la capital de Mexico?",
         "img": "../assets/mexico.png",
         "respuesta": ["Mexico", "Guadalajara", "Monterrey", "Cancun"]
+    },
+    {
+        "id": "",
+        "pregunta": "",
+        "img": "",
+        "respuesta": []
     }
 ]

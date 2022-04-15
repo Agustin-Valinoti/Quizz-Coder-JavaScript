@@ -14,6 +14,7 @@ async function localApi() {
 }
 
 localApi();
+
 // ARMANDO EL CUESTIONARIO
 
 function useDataApi() {
@@ -31,7 +32,7 @@ function useDataApi() {
     const q = questionary[i]; //TOMO LA DATA DE LA API
     let a = q.respuesta; //TRAIGO LAS RESPUESTAS
     rightAnswer = a[0]; //DEFINO LA RESPUESTA CORRECTA
-    a = a.sort((a,b) => Math.floor(Math.random() * 3) -1);
+    a = a.sort((a,b) => Math.floor(Math.random() * 3) -1); // DANDOLE ALEATORIEDAD A LA VISUALIZACION DE LAS RESPUESTAS
 
     const htmlAnswersArray = a.map( //RECORRO EL ARRAY DE RESPUESTAS
       (currentA) => `
@@ -62,6 +63,21 @@ function useDataApi() {
             document.querySelector('.time').innerHTML = time
         }
     },1000)
+
+    if (currentQuestionIndex == 11) {
+      swal(`Terminaste, tu puntaje fue de ${rightAnswers} respuestas correctas`, {
+        buttons: {
+          inicioBtn: {
+            text: "Volver al Inicio",
+        }},
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+      }).then(() => {
+        window.location = '/index.html'
+      });
+      clearInterval(timeInterval)
+      clearInterval(timeInterval2)
+    }
   };
 
   evaluateAnswer = (answer, obj) => { //FUNCION PARA EVALUAR LAS RESPUESTAS
@@ -79,6 +95,7 @@ function useDataApi() {
       document.querySelector('.correctas').innerHTML = rightAnswers // IMPRIMO EL CONTADOR
       clearInterval(timeInterval)
       timeInterval2 = setInterval(() => {printHTMLquestion(currentQuestionIndex);},3000)
+      
     } else { // CONDICIONAL DE RESPUESTA INCORRECTA
         swal("Ops", "Eso no es correcto!", "error", {
             buttons: false,
@@ -88,9 +105,14 @@ function useDataApi() {
       document.querySelector('.incorrectas').innerHTML = wrongAnswers // IMPRIMO EL CONTADOR
       clearInterval(timeInterval)
       timeInterval2 = setInterval(() => {printHTMLquestion(currentQuestionIndex);},3000)
-    }
+      
+    } 
+
+    
   };
 
   printHTMLquestion(currentQuestionIndex);
+
+  
 
 }
