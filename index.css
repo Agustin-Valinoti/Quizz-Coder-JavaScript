@@ -61,6 +61,7 @@ a {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background: linear-gradient(45deg, rgb(38, 70, 83), rgb(42, 157, 143));
 }
 
 .pregunta {
@@ -71,14 +72,39 @@ a {
     border: solid 2px;
     padding: 25px;
     border-radius: 30px;
+    margin: auto;
+    background: linear-gradient(135deg, rgb(236, 243, 158), rgb(79, 119, 45));
+    box-shadow: 0px 0px 20px 23px rgb(0 0 0 / 20%);
 }
 
 .btnScript {
     height: 40px;
     width: 100px;
     cursor: pointer;
+    background-color: rgb(236, 243, 158);
 }
 
 .answer {
     padding: 10px;
 }
+
+.respuesta {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.respuesta__item {
+    margin: 0px 60px 0px 20px;
+    border: solid 2px;
+    padding: 20px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgb(236, 243, 158), rgb(79, 119, 45));
+    box-shadow: 0px 0px 20px 23px rgb(0 0 0 / 20%);
+}
+
+.swal-overlay {
+    background-color: rgba(38, 70, 83, 0.65);
+  }

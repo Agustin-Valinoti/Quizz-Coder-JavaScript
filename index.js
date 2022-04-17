@@ -25,8 +25,7 @@ function useDataApi() {
   let timeInterval;
   let time = 10;
   let timeInterval2;
-  let ultimaPuntuacion = 0;
-
+  let ultimaPuntuacion;
 
     const printHTMLquestion = (i) => { //FUNCION QUE PINTA LA ENCUESTA EN EL DOM
     currentQuestionIndex++; //PASO A LA PROXIMA ENCUESTA SUMANDO 1 AL INDEX
@@ -80,6 +79,7 @@ function useDataApi() {
       clearInterval(timeInterval2)
       ultimaPuntuacion = rightAnswers
       sessionStorage.setItem('ultPuntaje', ultimaPuntuacion)
+      document.querySelector('.pregunta').style.visibility = 'hidden';
     }
   };
 
@@ -93,6 +93,8 @@ function useDataApi() {
       swal("Excelente", "Respuesta correcta!", "success", {
         buttons: false,
         timer: 3000,
+        closeOnClickOutside: false,
+        closeOnEsc: false,
       }); // AVISO DE RESPUESTA CORRECTA
       rightAnswers++; // SUMO +1 AL CONTADOR DE CORRECTAS
       document.querySelector('.correctas').innerHTML = rightAnswers // IMPRIMO EL CONTADOR
@@ -101,8 +103,10 @@ function useDataApi() {
       
     } else { // CONDICIONAL DE RESPUESTA INCORRECTA
         swal("Ops", "Eso no es correcto!", "error", {
-            buttons: false,
-            timer: 3000,
+          buttons: false,
+          timer: 3000,
+          closeOnClickOutside: false,
+          closeOnEsc: false,
           });; // AVISO DE RESPUESTA INCORRECTA
       wrongAnswers++; // SUMO +1 AL CONTADOR
       document.querySelector('.incorrectas').innerHTML = wrongAnswers // IMPRIMO EL CONTADOR
