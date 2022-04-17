@@ -25,6 +25,7 @@ function useDataApi() {
   let timeInterval;
   let time = 10;
   let timeInterval2;
+  let ultimaPuntuacion = 0;
 
 
     const printHTMLquestion = (i) => { //FUNCION QUE PINTA LA ENCUESTA EN EL DOM
@@ -77,6 +78,8 @@ function useDataApi() {
       });
       clearInterval(timeInterval)
       clearInterval(timeInterval2)
+      ultimaPuntuacion = rightAnswers
+      sessionStorage.setItem('ultPuntaje', ultimaPuntuacion)
     }
   };
 
@@ -107,12 +110,8 @@ function useDataApi() {
       timeInterval2 = setInterval(() => {printHTMLquestion(currentQuestionIndex);},3000)
       
     } 
-
-    
   };
-
-  printHTMLquestion(currentQuestionIndex);
-
   
-
+  document.querySelector('.record').innerHTML = sessionStorage.getItem('ultPuntaje')
+  printHTMLquestion(currentQuestionIndex);
 }
